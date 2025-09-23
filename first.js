@@ -31,3 +31,14 @@ if(hour === 0 && prepand === "AM"){
  }
 }
 console.log("Current time : "+ hour + prepand + " : " + minute + " : " + second)
+
+//  Find Years When Jan 1 is Sunday.
+function findSundayYears (startYear,lastYear){
+    for(let year = startYear; year <= lastYear; year++){
+        const day = new Date(year,0,1);
+        if(day.getDay() === 0){
+            console.log("1st January is being a sunday "+ year)
+        }
+    }
+}
+findSundayYears(2014,2050);
