@@ -32,7 +32,7 @@ if(hour === 0 && prepand === "AM"){
 }
 console.log("Current time : "+ hour + prepand + " : " + minute + " : " + second)
 
-//  Find Years When Jan 1 is Sunday.
+// 2. Find Years When Jan 1 is Sunday.
 function findSundayYears (startYear,lastYear){
     for(let year = startYear; year <= lastYear; year++){
         const day = new Date(year,0,1);
@@ -42,3 +42,25 @@ function findSundayYears (startYear,lastYear){
     }
 }
 findSundayYears(2014,2050);
+//3. One is Positive and one is Negative
+function positiveNegative (x,y){
+    if((x < 0 && y > 0) || (x > 0 && y < 0)){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+console.log(positiveNegative(2,-2))
+
+// 4.Check Rightmost Digits
+function rightmost (x,y,z){
+    if(x % 10 === y % 10 || x % 10 === z % 10 || y % 10 === z % 10){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+const rightmostFind = rightmost(12,62,90);
+console.log(rightmostFind)
