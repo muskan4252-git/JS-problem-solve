@@ -183,3 +183,4 @@ function check_common_element (arr1,arr2){
     return false;
 }
 console.log(check_common_element([1,2,3],[3,4,5]))
+ 
